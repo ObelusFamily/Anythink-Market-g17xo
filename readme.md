@@ -10,4 +10,16 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 ## First setup
 
-**[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+### Intall Docker
+
+To run the project locally, you must have docker installed. If not yet installed, follow the instructions [here](https://docs.docker.com/get-docker/).
+
+### Run the project locally
+
+To run the envirnment locally, run the following command in the root directoery:
+
+```docker-compose up```
+
+
+This would run the DB, the backend and the frontend.
+
