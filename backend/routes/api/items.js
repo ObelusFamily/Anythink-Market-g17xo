@@ -94,8 +94,7 @@ router.get("/", auth.optional, function(req, res, next) {
               return item.toJSONFor(user);
             })
           ),
-          itemsCount: itemsCount,
-          query
+          itemsCount: itemsCount
         });
       });
     })
