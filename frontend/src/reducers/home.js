@@ -1,6 +1,10 @@
-import { HOME_PAGE_LOADED, HOME_PAGE_UNLOADED } from "../constants/actionTypes";
+import { HOME_PAGE_LOADED, HOME_PAGE_UNLOADED, SEARCH_TERM_CHANGED } from "../constants/actionTypes";
 
-const reducer = (state = {}, action) => {
+const defaultState = {
+  searchTerm: '',
+}
+
+const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case HOME_PAGE_LOADED:
       return {
@@ -9,6 +13,11 @@ const reducer = (state = {}, action) => {
       };
     case HOME_PAGE_UNLOADED:
       return {};
+    case SEARCH_TERM_CHANGED:
+      return {
+        ...state,
+        searchTerm: action.searchTerm
+      }
     default:
       return state;
   }
