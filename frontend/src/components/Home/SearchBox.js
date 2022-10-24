@@ -4,7 +4,7 @@ import { SEARCH_CLICKED, SEARCH_TERM_CHANGED } from "../../constants/actionTypes
 
 
 const mapStateToProps = (state) => ({
-    searchTerm: state.home.searchTerm,
+    searchTerm: state.home?.searchTerm,
 });
 
 const mapDispatchToProps = (dispatch) => ({
