@@ -77,7 +77,7 @@ const MainView = (props) => {
   if(props.items?.length === 0){
     return (
         <div id="empty" className={styles.emptyContainer}>
-          <img src="https://static.productionready.io/images/smiley-cyrus.jpg" className={styles.emptyLogo}/>
+          <img src="https://static.productionready.io/images/smiley-cyrus.jpg" alt="" className={styles.emptyLogo}/>
           <span>No Items found for "{props.searchTerm}"</span>
         </div>
       );
