@@ -73,7 +73,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const MainView = (props) => {
-  if (props.items && props.items.length === 0) {
+  if (props.searchTerm && props.items?.length === 0) {
     return (
       <div id="empty" className={styles.emptyContainer}>
         <img
