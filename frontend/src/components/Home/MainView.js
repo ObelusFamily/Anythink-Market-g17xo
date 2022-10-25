@@ -4,6 +4,9 @@ import agent from "../../agent";
 import { connect } from "react-redux";
 import { CHANGE_TAB } from "../../constants/actionTypes";
 
+import styles from "./MainView.module.scss";
+
+
 const YourFeedTab = (props) => {
   if (props.token) {
     const clickHandler = (ev) => {
@@ -62,6 +65,7 @@ const mapStateToProps = (state) => ({
   ...state.itemList,
   tags: state.home.tags,
   token: state.common.token,
+  searchTerm: state.home.searchTerm
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -70,6 +74,15 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const MainView = (props) => {
+  if(props.items?.length === 0){
+    return (
+        <div id="empty" className={styles.emptyContainer}>
+          <img src="https://static.productionready.io/images/smiley-cyrus.jpg" className={styles.emptyLogo}/>
+          <span>No Items found for "{props.searchTerm}"</span>
+        </div>
+      );
+    }
+
   return (
     <div>
       <div className="feed-toggle">
