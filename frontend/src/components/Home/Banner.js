@@ -10,7 +10,14 @@ const Banner = () => {
       <div className="container p-4 text-center">
         <img src={logo} alt="banner" />
         <div>
-          <span id="get-part">A place to </span><span onClick={() => {setShowSearchBox(true)}}>get</span>
+          <span id="get-part">A place to </span>
+          <span
+            onClick={() => {
+              setShowSearchBox(true);
+            }}
+          >
+            get
+          </span>
           {showSearchBox && <SearchBox />}
           <span> the cool stuff.</span>
         </div>
