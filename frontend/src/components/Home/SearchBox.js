@@ -19,9 +19,8 @@ function SearchBox(props) {
   const { searchTerm } = props;
 
   return (
-    <div>
+    <div id="search-box">
       <input
-        id="search-box"
         type="text"
         placeholder="What is that you truly desire?"
         value={searchTerm}
